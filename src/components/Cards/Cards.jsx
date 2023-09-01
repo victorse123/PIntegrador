@@ -1,11 +1,10 @@
-/* eslint-disable react/prop-types */
-
 import Card from "../Card/Card.jsx";
+import styles from "./Cards.module.css";
 
 export default function Cards(props) {
   const { characters, onClose } = props;
   return (
-    <div>
+    <div className = {styles.mainDiv}>
       {characters.map((char) => {
         return (
           <Card
