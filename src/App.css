@@ -7,3 +7,8 @@ body {
  
  }
  
+.active {
+  color: #0b5ed7 !important;
+  font-weight: bold;
+  border-bottom: 3px solid #0b5ed7;
+}

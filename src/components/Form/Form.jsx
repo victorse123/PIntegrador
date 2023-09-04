@@ -1,6 +1,6 @@
 import  { useState} from 'react'
 import validator from "./validation";
-//import styles from "./Form.module.css";
+import styles from "./Form.module.css";
 
 const Form = (props) => {
     const [userData, setUserData] = useState({email: "", password: ""});
@@ -22,7 +22,7 @@ const Form = (props) => {
 
 
   return (
-    <div>
+    <div className={styles.form}>
       <form onSubmit={handleSubmit}>
         {/*USERNAME*/} 
         <div>
