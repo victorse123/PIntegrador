@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar"
 import PATHROUTES from "../../helpers/PathRoutes.helper";
 import styles from "./NavBar.module.css";
+import "../../App.css";
 
 const NavBar = (props) => {
     const {onSearch} =  props;
@@ -12,6 +13,7 @@ const NavBar = (props) => {
       <Link to={PATHROUTES.ABOUT}>About</Link>
         <SearchBar onSearch={onSearch} />
     </div>
+    
   )
 }
 

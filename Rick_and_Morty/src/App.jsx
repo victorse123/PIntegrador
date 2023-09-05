@@ -1,20 +1,22 @@
 //commons imports
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
-//styles
-import './App.css';
+
 //components
 import Home from './components/Home/Home';
-import Cards from './components/Cards/Cards.jsx';
+//import Cards from './components/Cards/Cards.jsx';
 import NavBar from './components/NavBar/NavBar.jsx';
 import About from "./components/About/About.jsx";
 import Form from "./components/Form/Form.jsx";
+
 //Router-Dom
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Detail from "./components/Detail/Detail.jsx";
 
 import PATHROUTES from "./helpers/PathRoutes.helper.js";
 
+//styles
+import './App.css';
 
 function App() {
    const [characters, setCharacters]=useState([]);
@@ -35,7 +37,7 @@ function App() {
   
    useEffect(() => {
     !access && navigate('/');
-  }, [access]);
+  }, [access, navigate]);
 
 
    const  onSearch = (id) => {
@@ -66,7 +68,7 @@ const onClose = (id) => {
             
          <Route path={PATHROUTES.LOGIN} element={<Form login={login} />} />
          <Route path={PATHROUTES.HOME} element={<Home characters={characters} onClose={onClose} />}/>
-         <Route path={PATHROUTES.HOME} element={<Cards characters={characters} onClose={onClose} />} /> 
+         {/*<Route path={PATHROUTES.HOME} element={<Cards characters={characters} onClose={onClose} />} /> */}
          <Route path={PATHROUTES.ABOUT} element={<About/>} />
          <Route path={PATHROUTES.DETAIL} element={<Detail />} />
         </Routes>
