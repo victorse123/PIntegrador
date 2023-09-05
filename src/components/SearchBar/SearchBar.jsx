@@ -11,7 +11,7 @@ const SearchBar = (props) => {
   const { onSearch } = props;
   return (
     <div>
-      <input type="search" placeholder="Write ID...🔍" onChange={handleChange} value={id}/>
+      <input type="search" placeholder="ID...🔍" onChange={handleChange} value={id}/>
       <button onClick={() => onSearch(id)}>Agregar</button>
     </div>
   );
