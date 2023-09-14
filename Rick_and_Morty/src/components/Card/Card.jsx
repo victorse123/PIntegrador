@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
-import { addFav, removeFav } from "../../Redux/Actions";
+import { addFav, removeFav } from "../../Redux/Action";
 import { useState, useEffect } from "react";
 import { connect } from "react-redux";
 
