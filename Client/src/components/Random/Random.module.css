@@ -1,0 +1,28 @@
+.ran{
+    text-align: center; /* Establece la posicion de el contenido */
+    background-color: rgb(255, 255, 255); /* Establece el color */
+    height: 40px; /* Establece la altura deseada */
+    width: 350px; /* Establece el ancho de el contenedor */
+    padding: px; /* Establece el alto y ancho de el contenedor */
+    background: linear-gradient(180deg,#bfde42 0,#193840);
+    border-radius: 9px; /* Establece el radio de los bordes */
+    box-shadow: inset 0 0 2px #acdd26; /* Establece el color de el borde */
+    color: #fff; /* Establece color, pendiente por definir ubicacion */
+    cursor: pointer; /*Establece el tipo de cursor que se vera */
+    font-size: 20px; /* Establece el tamaño de fuente deseado */
+   
+}
+
+
+
+
+.input{
+    border: none;
+    width: 80%;
+}
+
+.btn{
+    background-color: transparent;
+    border: none;
+    width: 20%;
+}
