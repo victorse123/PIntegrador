@@ -17,11 +17,10 @@
 //    .listen(PORT, 'localhost')
 
 const express = require('express');
-const router = require('./routes/index');
-
 const server = express();
 const PORT = 3001;
 
+const router = require('./routes/index');
 
 
 server.use((req, res, next) => {
