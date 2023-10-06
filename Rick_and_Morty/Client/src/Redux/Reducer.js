@@ -1,5 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-case-declarations */
+
+import { REMOVE_FAV } from './Action' 
+
 const initialState = {
     myFavorites: [], 
     allCharacters: []
@@ -10,7 +13,7 @@ const rootReducer = (state = initialState, {type, payload}) => {
         case 'ADD_FAV':
             return { ...state, myFavorites: payload, allCharacters: payload };
 
-        case 'REMOVE_FAV':
+        case REMOVE_FAV:
              return { ...state, myFavorites: payload };
            
         case "FILTER":
