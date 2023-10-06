@@ -1,7 +1,6 @@
 import Cards from "../Cards/Cards";
 import styles from "./Home.module.css";
 
-
 const Home = (props) => {
   const {characters, onClose} = props;
     return (

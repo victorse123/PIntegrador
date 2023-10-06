@@ -4,15 +4,19 @@ import SearchBar from "../SearchBar/SearchBar";
 import PATHROUTES from "../../helpers/PathRoutes.helper";
 import styles from "./NavBar.module.css";
 
-const NavBar = (props) => {
-  const { onSearch } = props;
+const NavBar = ({ onSearch }) => {
+  const addRandomCharacter = () => {
+    const randomId = Math.floor(Math.random() * 826) + 1; // Genera un ID aleatorio entre 1 y 826
+    onSearch(randomId.toString()); // Llama a onSearch con el ID aleatorio como cadena
+  };
   return (
     <div className={styles.navBar}>
       <div className={styles.nav}>
+      
         <Link to={PATHROUTES.HOME}>Home</Link>
         <Link to={PATHROUTES.ABOUT}>About</Link>
         <Link to={PATHROUTES.FAVORITES}>Favorites</Link>
-        <Link to={PATHROUTES.RANDOM}>Random</Link> 
+        <button onClick={addRandomCharacter}>Random</button>
       </div>
       <div className={styles.search}>
         <SearchBar onSearch={onSearch} />
